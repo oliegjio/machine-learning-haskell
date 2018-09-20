@@ -44,3 +44,6 @@ matrixToTable (Matrix xs) = xs
 
 matrixMap :: (Float -> Float) -> Matrix -> Matrix
 matrixMap f (Matrix xs) = Matrix $ map (\ r -> map (\ e -> f e) r) xs
+
+zeroMatrix :: Int -> Int -> Matrix
+zeroMatrix n m = matrixWithValues n m 0
